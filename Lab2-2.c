@@ -6,15 +6,11 @@ int main() {
     printf("Input the value of n: \n");
     scanf("%d", &n);
     
-    double sum = 0.0;
-    double previous_mul = 1.0;  // Для збереження попереднього значення mul
-
+    double sum = 0;
+    double mul = 1; 
     for(int i = 1; i <= n; i++) {
-        // Оновлюємо значення mul з використанням попереднього значення
-        previous_mul *= (i + 1) * sin(i);
-        
-        // Обчислюємо поточний член суми
-        double term = (i * (i + 1)) / previous_mul;
+        mul *= (i + 1) * sin(i);
+        double elem = (i * (i + 1)) / mul;
         sum += term;
     }
 

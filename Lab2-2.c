@@ -11,7 +11,7 @@ int main() {
     for(int i = 1; i <= n; i++) {
         mul *= (i + 1) * sin(i);
         double elem = (i * (i + 1)) / mul;
-        sum += term;
+        sum += elem;
     }
 
     printf("%lf\n", sum);
